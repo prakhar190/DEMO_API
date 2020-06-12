@@ -1,24 +1,37 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The following routes are currently working
 
-Things you may want to cover:
+*   POST   /launches	{"rocket__id :"1",	"name" : "Launch 1"} => To create a launch send with JSON data.
 
-* Ruby version
+*   GET    /launches => To get all launches as JSON.
 
-* System dependencies
+*   GET    /launches/:id => To get a particular launch.
 
-* Configuration
+*   GET /launches?rocket_id=2 => to get all the launches with rocket 2.
 
-* Database creation
+*   PUT /launches/:id 	{"rocket_id": "2",	"name" : "launch 2"} => To Update a launch with JSON data.
 
-* Database initialization
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+*   POST   /rockets	{"rocket_family_id :"1",	"name" : "Alpha2"} = > To Create a rocket with JSON Data.
 
-* Deployment instructions
+*   GET    /rockets => To get all the rockets.
+
+*   GET    /rockets?rocket_family_id=2 => To get all the rockets with rocket_family 2.
+
+*   GET    /rockets/:id => To get a particular rocket with id.
+
+*   PUT /rockets/:id 	{"rocket_family_id": "2",	"name" : "Alpha3"} => To Update a particualr rocket with JSON Data.
+
+
+
+*   POST   /rocket_families 	{"abbreviation" :"A2",	"name" : "Alpha2"} => To create a rocket family with JSON data.
+
+*   GET    /rocket_families => To get all rocket families.
+
+*   GET    /rocket_families/:id => To get a particular rocket family.
+
+*  PUT /rocket_families/:id 	{"abbreviation" :"A3",	"name" : "Alpha3"} => To update a particual rocket family with JSON data.
 
 * ...
