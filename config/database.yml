@@ -84,4 +84,4 @@ production:
   <<: *default
   database: demo_api_production
   # username: lms_app
-  password: <%= ENV['LMS_APP_DATABASE_PASSWORD'] %>
+  # password: <%= ENV['LMS_APP_DATABASE_PASSWORD'] %>
