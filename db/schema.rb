@@ -12,21 +12,24 @@
 
 ActiveRecord::Schema.define(version: 2020_06_12_165333) do
 
-  create_table "launches", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "launches", force: :cascade do |t|
     t.string "name"
     t.integer "rocket_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "rocket_families", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "rocket_families", force: :cascade do |t|
     t.string "name"
     t.string "abbreviation"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "rockets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "rockets", force: :cascade do |t|
     t.string "name"
     t.integer "rocket_family_id"
   end
